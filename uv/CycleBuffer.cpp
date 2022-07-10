@@ -16,7 +16,7 @@ CycleBuffer::CycleBuffer()
     :writeIndex_(0),
     readIndex_(0)
 {
-    buffer_ = new uint8_t[GlobalConfig::GlobalConfig::CycleBufferSize];
+    buffer_ = new uint8_t[(size_t)GlobalConfig::GlobalConfig::CycleBufferSize];
 }
 
 CycleBuffer::~CycleBuffer()
@@ -58,7 +58,7 @@ int CycleBuffer::readBufferN(std::string& data, uint64_t N)
         return -1;
     }
     int start = (int)data.size();
-    data.resize(start + N);
+    data.resize((size_t)(start + N));
     //string被resize空间，所以操作指针安全
     char* out = const_cast<char*>(data.c_str());
     out += start;

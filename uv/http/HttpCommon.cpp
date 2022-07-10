@@ -94,7 +94,7 @@ int uv::http::SplitStrOfSpace(std::string& str, std::vector<std::string>& out, i
 
 uint64_t uv::http::GetCommomStringLength(const std::string & str1,const std::string & str2)
 {
-    uint64_t i = 0;
+    size_t i = 0;
     for (;i < str1.size() && i < str2.size();i++)
     {
         if (str1[i] != str2[i])

@@ -77,4 +77,84 @@
       <Filter>uv</Filter>
     </ClCompile>
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\uv\include\Async.hpp">
+      <Filter>uv</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\uv\include\CycleBuffer.hpp">
+      <Filter>uv</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\uv\include\DnsGet.hpp">
+      <Filter>uv</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\uv\include\EventLoop.hpp">
+      <Filter>uv</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\uv\include\GlobalConfig.hpp">
+      <Filter>uv</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\uv\include\Idle.hpp">
+      <Filter>uv</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\uv\include\ListBuffer.hpp">
+      <Filter>uv</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\uv\include\LogWriter.hpp">
+      <Filter>uv</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\uv\include\Packet.hpp">
+      <Filter>uv</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\uv\include\PacketBuffer.hpp">
+      <Filter>uv</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\uv\include\Signal.hpp">
+      <Filter>uv</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\uv\include\SocketAddr.hpp">
+      <Filter>uv</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\uv\include\TcpAcceptor.hpp">
+      <Filter>uv</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\uv\include\TcpClient.hpp">
+      <Filter>uv</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\uv\include\TcpConnection.hpp">
+      <Filter>uv</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\uv\include\TcpServer.hpp">
+      <Filter>uv</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\uv\include\Timer.hpp">
+      <Filter>uv</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\uv\include\TimerWheel.hpp">
+      <Filter>uv</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\uv\include\Udp.hpp">
+      <Filter>uv</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\uv\include\uv11.hpp">
+      <Filter>uv</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\uv\include\http\HttpClient.hpp">
+      <Filter>uv\http</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\uv\include\http\HttpCommon.hpp">
+      <Filter>uv\http</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\uv\include\http\HttpServer.hpp">
+      <Filter>uv\http</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\uv\include\http\RadixTree.hpp">
+      <Filter>uv\http</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\uv\include\http\Request.hpp">
+      <Filter>uv\http</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\uv\include\http\Response.hpp">
+      <Filter>uv\http</Filter>
+    </ClInclude>
+  </ItemGroup>
 </Project>

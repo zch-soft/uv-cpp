@@ -167,7 +167,7 @@ ParseResult Request::unpack(std::string& data)
         return ParseResult::Error;
     }
     //解析消息头
-    for (uint64_t i = 1; i < headList.size(); i++)
+    for (size_t i = 1; i < headList.size(); i++)
     {
         if (AppendHead(headList[i],heads_) != 0)
         {

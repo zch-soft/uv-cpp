@@ -123,7 +123,7 @@ ParseResult Response::unpack(std::string& data)
         return ParseResult::Error;
     }
     //解析消息头
-    for (uint64_t i = 1; i < headList.size(); i++)
+    for (size_t i = 1; i < headList.size(); i++)
     {
         if (AppendHead(headList[i],heads_) != 0)
         {
@@ -176,8 +176,8 @@ ParseResult Response::unpackAndCompleted(std::string& data)
 ParseResult Response::isCompletedChunked()
 {
     std::string temp;
-    uint64_t p1 = 0;
-    for (uint64_t p2 = 0;true;)
+	size_t p1 = 0;
+    for (size_t p2 = 0;true;)
     {
         p2 = content_.find("\r\n", p1 + 1);
         if (p2 == content_.npos)
@@ -186,7 +186,7 @@ ParseResult Response::isCompletedChunked()
         }
         try
         {
-            uint64_t num = std::stoi(content_.substr(p1, p2 - p1),nullptr,16);
+            int num = std::stoi(content_.substr(p1, p2 - p1),nullptr,16);
             if (num == 0)
             {
                 content_.swap(temp);

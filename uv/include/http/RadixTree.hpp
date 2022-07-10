@@ -124,8 +124,8 @@ inline void RadixTree<Type>::setNode(RadixTreeNodePtr<Type>& node, std::string& 
     //相同长度小于节点key长度，则拆分节点
     else if (commonLength < node->key.size())
     {
-        std::string key1(node->key, 0, commonLength);
-        std::string key2(node->key, commonLength,node->key.size()-commonLength);
+        std::string key1(node->key, 0, (size_t)commonLength);
+        std::string key2(node->key, (size_t)commonLength,node->key.size()-(size_t)commonLength);
         auto childNode = std::make_shared<RadixTreeNode<Type>>();
         *childNode = { node->isEmpty,key2,node->child,nullptr,node->value };
         node->isEmpty = true;
@@ -140,7 +140,7 @@ inline void RadixTree<Type>::setNode(RadixTreeNodePtr<Type>& node, std::string& 
         else
         {
             auto newNode = std::make_shared<RadixTreeNode<Type>>();
-            std::string key3(key, commonLength,key.size()-commonLength);
+            std::string key3(key, (size_t)commonLength, key.size()-(size_t)commonLength);
             *newNode = { false,key3,nullptr,nullptr,value };
             childNode->next = newNode;
         }
@@ -156,7 +156,7 @@ inline void RadixTree<Type>::setNode(RadixTreeNodePtr<Type>& node, std::string& 
         }
         else //否则，则拆分key，递归子节点
         {
-            std::string key1(key, commonLength, key.size()-commonLength);
+            std::string key1(key, (size_t)commonLength, key.size()-(size_t)commonLength);
             //子节点为空，直接插入
             if (nullptr == node->child)
             {
@@ -224,7 +224,7 @@ inline bool RadixTree<Type>::getNode(RadixTreeNodePtr<Type>& node, const std::st
             }
             else //否则递归子节点
             {
-                std::string key1(key, commonLength, key.size() - commonLength);
+                std::string key1(key, (size_t)commonLength, key.size() - (size_t)commonLength);
                 return getNode(node->child, key1, value);
             }
         }
